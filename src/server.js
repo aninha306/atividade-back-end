@@ -13,3 +13,4 @@ app.use(rotas);
 app.listen(port, () =>
   console.log(`⚡ Servidor iniciado em http://localhost:${port}`)
 );
+

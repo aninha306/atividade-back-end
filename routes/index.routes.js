@@ -6,7 +6,7 @@ const animais = Router();
 animais.use("/animais", rotasAnimals);
 
 animais.get("/", (req, res) => {
-    return res.status(200).send({message: "Servidor Funcionando!"});
+    return res.status(200).send({ message: "Servidor Funcionando!" });
 });
 
 export default animais;

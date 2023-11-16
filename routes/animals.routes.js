@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { todosAnimais, encontrarAnimalPorId, criarAnimal, deletarAnimal, editarAnimal } from "../controllers/animals.controller.js";
+import { todosAnimais, encontrarAnimalPorId, criarAnimal, editarAnimal, deletarAnimal } from "../controllers/animals.controller.js";
 
 const rotasAnimals = Router();
 

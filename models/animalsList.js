@@ -2,17 +2,17 @@ export class animalsList{
     constructor(){
         this.animais = [];
     }
-    getAllAnimals(){
+    todosAnimais(){
         return this.animais;
     }
-    getAnimalById(id){
+    encontrarAnimalPorId(id){
         return this.animais.find((animais)=> animais.id == id);
     }
-    createAnimals(animal){
-        this.cursos.push(animal);
+    criarAnimal(animal){
+        this.animais.push(animal);
     }
-    updateAnimal(id, nome, idade, tipo, cor, status, imagem){
-        const animal = this.getAnimalById(id);
+    editarAnimal(id, nome, idade, tipo, cor, status, imagem, vacinado){
+        const animal = this.encontrarAnimalPorId(id);
 
         if(!animal) {
             return null;
@@ -24,10 +24,11 @@ export class animalsList{
         animal.cor = cor;
         animal.status = status;
         animal.imagem = imagem;
+        animal.vacinado = vacinado;
 
         return animal;
     }
-    removeAnimal(AnimalId){
+    deletarAnimal(AnimalId){
         this.animais = this.animais.filter((Animal) => Animal.id == AnimalId);
     }
 }
