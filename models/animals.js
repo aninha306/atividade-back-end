@@ -1,14 +1,13 @@
 import { v4 } from "uuid";
 
 export class Animais {
-    constructor(nome, idade, tipo, cor, status, imagem, vacinado) {
+    constructor(nome, idade, tipo, cor, imagem, status) {
         this.nome = nome;
         this.idade = idade;
         this.tipo = tipo;
         this.cor = cor;
-        this.status = status;
         this.imagem = imagem;
-        this.vacinado = vacinado;
+        this.status = status;
         this.id = this.gerarId();
     }
     gerarId(){

@@ -11,7 +11,7 @@ export class animalsList{
     criarAnimal(animal){
         this.animais.push(animal);
     }
-    editarAnimal(id, nome, idade, tipo, cor, status, imagem, vacinado){
+    editarAnimal(id, nome, idade, tipo, cor,imagem, status){
         const animal = this.encontrarAnimalPorId(id);
 
         if(!animal) {
@@ -22,9 +22,8 @@ export class animalsList{
         animal.idade = idade;
         animal.tipo = tipo;
         animal.cor = cor;
-        animal.status = status;
         animal.imagem = imagem;
-        animal.vacinado = vacinado;
+        animal.status = status;
 
         return animal;
     }
